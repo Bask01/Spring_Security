@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Secure Page</title>
+</head>
+<body>
+	<h1>Secure Index Page</h1>
+	
+	<!-- does the samething withh sec:authorize="isAuthenticated() -->
+	<p>Email: <span th:text="${username}">email</span></p><!--display the username  -->
+	
+	<ul>
+		<li th:each="role : ${roles}" th:text="${role}">role</li><!--display the role  -->
+	</ul> 
+	
+	
+	
+<!-- 		<div sec:authorize="isAuthenticated()">
+		
+			<p>User: <span sec:authentication="name"></span>
+			</p>
+			</div> -->
+	
+	<ul>
+		<li><a href="/" th:href="@{/}">Main Index</a></li>
+		<li><a href="/logout" th:href="@{/logout}">Log Out</a></li>	
+		<li><a href="/exercises" th:href="@{/exercises}">Exercise Pages</a></li>
+	</ul>
+	
+</body>
+</html>
+
+<!-- INSERT INTO users (email, encryptedpassword, enabled)
+VALUES ('foo@foo.com', '$2a$10$OpARYXO2pG2fqEU8H77A/eY5fZuWCaLUuVD.u37ArgpgC7YYCJIIS', 1); -->

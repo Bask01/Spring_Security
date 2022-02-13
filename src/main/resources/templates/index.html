@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Main Index</title>
+<link rel="stylesheet" href="../static/css/main.css"
+	th:href="@{/css/main.css}">
+</head>
+<body>
+
+	
+	<header>
+		<h1>Main Index</h1>
+		
+		<p><a href="/secure" th:href="@{/secure}">Secure Pages</a><br>
+			<a href="/exercises" th:href="@{/exercises}">Exercises Pages</a>
+		</p>
+	
+	
+
+	</header>
+	
+	<p><img alt="cat photo" src="/images/lily.jpeg" th:src="@{/images/lily.jpeg}">
+	
+	
+</body>
+</html>

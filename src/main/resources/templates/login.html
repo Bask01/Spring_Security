@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Log In</title>
+</head>
+<body>
+	<h1>Log in to Kubra's Secret Pages</h1>
+	
+	<div th:if="${param.error}" class="error">Invalid user name or password</div>
+	<div th:if="${param.logout}">You have been logged out.</div>
+	
+	<form method="POST" action="#" th:action="@{/login}">	
+		<p><label for="email">Email:		
+			<input type="email" id="email" name="username" >
+		</label><br>
+		<label for="pass">Password:
+			<input type="password" id="pass" name="password">
+		</label>	
+	   </p>
+	   <p><input type="submit" value="Log In"></p>
+	</form>
+	
+	<p><a href="/" th:href="@{/}">Back to Main Index</a>
+</body>
+</html>

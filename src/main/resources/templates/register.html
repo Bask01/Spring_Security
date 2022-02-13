@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create New Account</title>
+<script src="../static/js/scripts.js" th:src="@{/js/scripts.js}"></script>
+</head>
+<body>
+<h1>Register</h1>
+
+
+<form name="form" action="#" th:action="@{/register}" method="post">
+  <p><label for="email">Email: <input type="email" name="email" id="email"
+      title="Enter a valid email address." required></label>
+    <br>
+    <label for="pass">Password: <input type="password" name="pass" id="pass"
+      title="Choose a password." required></label>
+    <br>
+    <label for="verify">Verify Password: <input type="password" name="verify"
+    id="verify" title="Re-enter the same password." required></label>
+  </p>
+  <p><input type="submit" value="Register"></p>
+</form>
+
+<div id="error" class="error"></div>
+
+
+
+</body>
+</html>
